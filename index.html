@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>App Fitness - Registro</title>
+</head>
+<body>
+
+  <h1>Bienvenido a FitLife App</h1>
+
+  <!-- ================= REGISTRO ================= -->
+
+  <section>
+    <h2>Registro de Usuario</h2>
+
+
+<form action="https://formspree.io/f/xnjkdnrd" method="POST">
+
+  <!-- DATOS PERSONALES -->
+  <fieldset>
+    <legend>Datos personales</legend>
+
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Ana Pérez" autocomplete="name">
+
+    <br><br>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required placeholder="Ej: ana@email.com" autocomplete="email">
+
+    <br><br>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required minlength="8" autocomplete="new-password">
+
+    <br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" required min="13" max="120">
+
+    <br><br>
+
+    <label for="fecha">Fecha de nacimiento:</label>
+    <input type="date" id="fecha" name="fecha" required>
+
+  </fieldset>
+
+  <br>
+
+  <!-- CUENTA -->
+  <fieldset>
+    <legend>Cuenta</legend>
+
+    <label for="usuario">Nombre de usuario:</label>
+    <input 
+      type="text" 
+      id="usuario" 
+      name="usuario" 
+      required 
+      minlength="5" 
+      maxlength="12"
+      pattern="[A-Za-z0-9]{5,12}" 
+      placeholder="Solo letras y números"
+    >
+
+  </fieldset>
+
+  <br>
+
+  <!-- UBICACIÓN -->
+  <fieldset>
+    <legend>Ubicación</legend>
+
+    <label for="pais">País:</label>
+    <select id="pais" name="pais" required>
+      <option value="">Seleccionar</option>
+      <option>Argentina</option>
+      <option>Chile</option>
+      <option>Uruguay</option>
+      <option>España</option>
+    </select>
+
+    <br><br>
+
+    <label for="ciudad">Ciudad:</label>
+    <input list="ciudades" id="ciudad" name="ciudad" required placeholder="Ej: Buenos Aires">
+    <datalist id="ciudades">
+      <option value="Buenos Aires">
+      <option value="Córdoba">
+      <option value="Rosario">
+      <option value="Mendoza">
+    </datalist>
+
+  </fieldset>
+
+  <br>
+
+  <!-- PREFERENCIAS -->
+  <fieldset>
+    <legend>Preferencias</legend>
+
+    <p>Género:</p>
+    <input type="radio" id="femenino" name="genero" value="femenino" required>
+    <label for="femenino">Femenino</label>
+
+    <input type="radio" id="masculino" name="genero" value="masculino">
+    <label for="masculino">Masculino</label>
+
+    <input type="radio" id="otro" name="genero" value="otro">
+    <label for="otro">Otro</label>
+
+    <br><br>
+
+    <p>Intereses:</p>
+    <input type="checkbox" id="fitness" name="intereses" value="fitness">
+    <label for="fitness">Fitness</label>
+
+    <input type="checkbox" id="nutricion" name="intereses" value="nutricion">
+    <label for="nutricion">Nutrición</label>
+
+    <input type="checkbox" id="yoga" name="intereses" value="yoga">
+    <label for="yoga">Yoga</label>
+
+  </fieldset>
+
+  <br>
+
+  <!-- BIO -->
+  <fieldset>
+    <legend>Sobre ti</legend>
+
+    <label for="bio">Biografía:</label><br>
+    <textarea id="bio" name="bio" maxlength="200" placeholder="Contanos sobre vos..." aria-label="Biografía del usuario"></textarea>
+
+  </fieldset>
+
+  <br>
+
+  <button type="submit">Registrarse</button>
+
+</form>
+```
+
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+
+  <section>
+    <h2>Contacto Soporte</h2>
+
+```
+<form action="https://formspree.io/f/TU_ENDPOINT" method="POST">
+
+  <label for="nombre_contacto">Nombre:</label>
+  <input type="text" id="nombre_contacto" name="nombre_contacto" required>
+
+  <br><br>
+
+  <label for="email_contacto">Email:</label>
+  <input type="email" id="email_contacto" name="email_contacto" required>
+
+  <br><br>
+
+  <label for="motivo">Motivo:</label>
+  <select id="motivo" name="motivo" required>
+    <option value="">Seleccionar</option>
+    <option value="soporte">Soporte técnico</option>
+    <option value="bug">Reportar error</option>
+    <option value="consulta">Consulta general</option>
+  </select>
+
+  <br><br>
+
+  <label for="mensaje">Mensaje:</label><br>
+  <textarea id="mensaje" name="mensaje" required></textarea>
+
+  <br><br>
+
+  <input type="checkbox" id="terminos" name="terminos" required>
+  <label for="terminos">Acepto los términos y condiciones</label>
+
+  <br><br>
+
+  <button type="submit">Enviar</button>
+
+</form>
+```
+
+  </section>
+
+</body>
+</html>
